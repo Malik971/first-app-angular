@@ -11,8 +11,15 @@ import { CommonModule } from '@angular/common';
 export class Tva {
 
   montantHt: number = 0;
-  tauxTva: number = 20;
-  tauxDisponibles: number[] = [5.5, 10, 20];
+  tauxTva: number = 5;
+  tauxDisponibles: number[] = [5, 10, 20];
+  tva: number = 0;
+  ttc: number = 0;
+
+  onAffiche() {
+    this.tva = this.montantHt * (this.tauxTva/100);
+    this.ttc = this.montantHt + this.tva;
+  }
 
 }
 

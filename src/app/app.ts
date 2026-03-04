@@ -6,7 +6,7 @@ import { Basic } from './basic/basic';
 
 @Component({
   selector: 'app-root',
-  imports: [Header, Footer, Basic],
+  imports: [Header, Footer, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

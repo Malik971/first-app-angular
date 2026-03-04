@@ -2,15 +2,22 @@
  
 <div>
   <label>Montant HT :</label>
-  <input type="number" [(ngModel)]="montantHt">
+  <input type="number" [(ngModel)]="montantHt" (input)="onAffiche()">
 </div>
  
 <div>
   <label>Taux TVA :</label>
-  <select [(ngModel)]="tauxTva">
-    <option *ngFor="let taux of tauxDisponibles" [value]="taux">
+  <select [(ngModel)]="tauxTva" (change)="onAffiche()">
+    <option *ngFor="let taux of tauxDisponibles" [ngValue]="taux">
       {{ taux }} %
     </option>
-   
   </select>
+</div>
+
+<div>
+  <label>tva : <b>{{ tva }}</b></label>
+</div>
+
+<div>
+  <label>ttc : <b>{{ ttc }}</b></label>
 </div>
