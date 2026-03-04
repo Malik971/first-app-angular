@@ -2,13 +2,15 @@ import { Component } from '@angular/core';
 import { Calculatrice } from './calculatrice/calculatrice';
 import { Color } from './color/color';
 import { Produits } from './produits/produits';
+import { Tva } from './tva/tva';
 import { FormsModule } from '@angular/forms';
+
  
  
 
 @Component({
   selector: 'app-basic',
-  imports: [Calculatrice, Color, Produits, FormsModule],
+  imports: [Calculatrice, Color, Produits, FormsModule, Tva],
   templateUrl: './basic.html',
   styleUrl: './basic.css',
 })

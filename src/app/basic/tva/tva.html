@@ -1,0 +1,16 @@
+<h4>Calcul de TVA</h4>
+ 
+<div>
+  <label>Montant HT :</label>
+  <input type="number" [(ngModel)]="montantHt">
+</div>
+ 
+<div>
+  <label>Taux TVA :</label>
+  <select [(ngModel)]="tauxTva">
+    <option *ngFor="let taux of tauxDisponibles" [value]="taux">
+      {{ taux }} %
+    </option>
+   
+  </select>
+</div>

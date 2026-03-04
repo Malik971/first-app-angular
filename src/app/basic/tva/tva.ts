@@ -1,0 +1,18 @@
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-tva',
+  imports: [FormsModule, CommonModule],
+  templateUrl: './tva.html',
+  styleUrl: './tva.css',
+})
+export class Tva {
+
+  montantHt: number = 0;
+  tauxTva: number = 20;
+  tauxDisponibles: number[] = [5.5, 10, 20];
+
+}
+
