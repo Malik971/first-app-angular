@@ -11,11 +11,13 @@ import { CommonModule } from '@angular/common';
   styleUrl: './user-list-component.css',
 })
 export class UserListComponent {
-  private ulm: UserList = userListManager;
-  public users: User[] = [];
 
-  constructor(route: ActivatedRoute) {
-    const id: string = route.snapshot.params['id'];
+  private ulm : UserList = userListManager;
+  public users : User[] = [];
+
+  constructor(route: ActivatedRoute){
+
+      const id: string = route.snapshot.params['id'];
        
       let usr = this.ulm.getUserById(id);
       if (usr){this.users.push(usr);}

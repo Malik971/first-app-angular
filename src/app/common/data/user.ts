@@ -9,7 +9,7 @@ export class User {
         public newPassword : string = '',
         public mainGroup : string = ''
     ){
-        this.id = new Date().getTime().toString() ;
+      //  this.id = new Date().getTime().toString() ;
     }
 
 }
