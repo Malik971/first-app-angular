@@ -2,11 +2,13 @@
 
 <p *ngIf="users.length ===0"> Aucun utilisateur trouvé </p>
 
-<div *ngIf="users.length>0">
 
-    <strong> {{users[0].firstName}} {{users[0].lastName}} </strong>
-    <div> @{{users[0].userName}} </div>
-    <div> {{users[0].email}} </div>
-    <small> {{users[0].mainGroup}} </small>
+  <ul *ngIf="users.length > 0" class="list">
+    <li *ngFor="let user of users" class="item">
+      <strong>{{ user.firstName }} {{ user.lastName }}</strong>
+      <div>@{{ user.userName }}</div>
+      <div>{{ user.email }}</div>
+      <small>{{ user.mainGroup }}</small>
+    </li>
+  </ul>
  
-</div>

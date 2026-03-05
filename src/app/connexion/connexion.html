@@ -1,0 +1,18 @@
+<form #formUser="ngForm">
+  <h3>Connexion</h3>
+  <!-- {{ user.id }} <br /> -->
+  <label > username </label>
+  <input
+    name="username"
+    [(ngModel)]="user.userName"
+    required
+    pattern="^[a-zA-Z].+"
+    #usernameFormCtrl="ngModel"
+  /><br />
+  <!-- <div [hidden]="usernameFormCtrl.valid">
+            username is required
+        </div> -->
+  <label> newPassword </label>
+  <input name="newpassword" [(ngModel)]="user.newPassword" required minlength="3" /> <br />
+  <button (click)="onSave()" (click)="onFetchFromUsername()" [disabled]="!formUser.form.valid">Connexion</button> &nbsp;
+</form>
