@@ -1,4 +1,13 @@
 <footer>
-<p>&copy; Mon application</p>
-<p>Développer avec Angular | Tous droits réservés</p>
+    <p>&copy; Mon application</p>
+    <p>Développer avec Angular | Tous droits réservés</p>
+
+    <label>
+    Choisir une couleur préférée
+    </label>
+    <select [(ngModel)]="preferencesService.couleurFondPreferee">
+        <option *ngFor="let color of preferencesService.CSS_COLOR_NAMES | keyvalue" [value]="color.value">
+            {{ color.key }}
+        </option>
+    </select>
 </footer>

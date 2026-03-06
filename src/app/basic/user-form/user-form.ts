@@ -22,9 +22,9 @@ export class UserForm {
       // this.user.id = new Date().getTime().toString() ; 
       this.message = "user =" + JSON.stringify(this.user);
       console.log(JSON.stringify(this._ulm.getAllUsers()));
-      this._router.navigateByUrl('/users/all');
-      // let link = ['/users', this.user.id];
-      // this._router.navigate(link);
+      // this._router.navigateByUrl('/users/all');
+      let link = ['/users', this.user.id];
+      this._router.navigate(link);
 
     }
 
